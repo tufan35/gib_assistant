@@ -1,0 +1,130 @@
+2024-11-25 11:41:34,292 - INFO - AI asistan hazır!
+2024-11-25 11:41:34,292 - INFO - Scraper initialized
+2024-11-25 11:41:44,627 - INFO - GPT'den hızlı cevap alınıyor
+2024-11-25 11:41:44,627 - INFO - API isteği yapılıyor (deneme 1/3)
+2024-11-25 11:41:49,778 - INFO - Cevap üretildi. Güncelleme gerekiyor mu: True
+2024-11-25 11:42:16,773 - INFO - GPT'den hızlı cevap alınıyor
+2024-11-25 11:42:16,773 - INFO - API isteği yapılıyor (deneme 1/3)
+2024-11-25 11:42:24,397 - INFO - Cevap üretildi. Güncelleme gerekiyor mu: True
+2024-11-25 11:48:17,246 - INFO - AI asistan hazır!
+2024-11-25 11:48:17,246 - INFO - Scraper initialized
+2024-11-25 11:48:23,315 - INFO - GPT'den hızlı cevap alınıyor
+2024-11-25 11:48:23,315 - INFO - API isteği yapılıyor (deneme 1/3)
+2024-11-25 11:48:24,784 - ERROR - API isteği hatası (deneme 1/3): 403 Client Error: Forbidden for url: https://api-inference.huggingface.co/models/nomic-ai/gpt4all-j
+2024-11-25 11:48:29,790 - INFO - API isteği yapılıyor (deneme 2/3)
+2024-11-25 11:48:30,692 - ERROR - API isteği hatası (deneme 2/3): 403 Client Error: Forbidden for url: https://api-inference.huggingface.co/models/nomic-ai/gpt4all-j
+2024-11-25 11:48:34,890 - INFO - GPT'den hızlı cevap alınıyor
+2024-11-25 11:48:34,891 - INFO - API isteği yapılıyor (deneme 1/3)
+2024-11-25 11:48:35,777 - INFO - API isteği yapılıyor (deneme 3/3)
+2024-11-25 11:48:35,869 - ERROR - API isteği hatası (deneme 1/3): 403 Client Error: Forbidden for url: https://api-inference.huggingface.co/models/nomic-ai/gpt4all-j
+2024-11-25 11:48:36,724 - ERROR - API isteği hatası (deneme 3/3): 403 Client Error: Forbidden for url: https://api-inference.huggingface.co/models/nomic-ai/gpt4all-j
+2024-11-25 11:48:36,725 - ERROR - GPT cevabı alınırken hata oluştu: 403 Client Error: Forbidden for url: https://api-inference.huggingface.co/models/nomic-ai/gpt4all-j
+2024-11-25 11:48:40,874 - INFO - API isteği yapılıyor (deneme 2/3)
+2024-11-25 11:48:44,554 - ERROR - API isteği hatası (deneme 2/3): 403 Client Error: Forbidden for url: https://api-inference.huggingface.co/models/nomic-ai/gpt4all-j
+2024-11-25 11:48:49,556 - INFO - API isteği yapılıyor (deneme 3/3)
+2024-11-25 11:48:50,525 - ERROR - API isteği hatası (deneme 3/3): 403 Client Error: Forbidden for url: https://api-inference.huggingface.co/models/nomic-ai/gpt4all-j
+2024-11-25 11:48:50,526 - ERROR - GPT cevabı alınırken hata oluştu: 403 Client Error: Forbidden for url: https://api-inference.huggingface.co/models/nomic-ai/gpt4all-j
+2024-11-25 11:50:41,409 - INFO - AI asistan hazır!
+2024-11-25 11:50:41,409 - INFO - Scraper initialized
+2024-11-25 11:50:48,519 - INFO - GPT'den hızlı cevap alınıyor
+2024-11-25 11:50:48,520 - INFO - API isteği yapılıyor (deneme 1/3)
+2024-11-25 11:50:53,375 - INFO - GPT'den hızlı cevap alınıyor
+2024-11-25 11:50:53,376 - INFO - API isteği yapılıyor (deneme 1/3)
+2024-11-25 11:51:07,649 - INFO - Cevap üretildi. Güncelleme gerekiyor mu: True
+2024-11-25 11:51:11,126 - INFO - Cevap üretildi. Güncelleme gerekiyor mu: True
+2024-11-25 11:54:15,551 - INFO - AI asistan hazır!
+2024-11-25 11:54:15,551 - INFO - Scraper initialized
+2024-11-25 11:54:27,056 - INFO - GPT'den hızlı cevap alınıyor
+2024-11-25 11:54:27,057 - INFO - API isteği yapılıyor (deneme 1/3)
+2024-11-25 11:54:34,085 - INFO - Cevap üretildi. Güncelleme gerekiyor mu: True
+2024-11-25 11:55:46,653 - INFO - AI asistan hazır!
+2024-11-25 11:55:46,654 - INFO - Scraper initialized
+2024-11-25 11:55:47,598 - INFO - GPT'den hızlı cevap alınıyor
+2024-11-25 11:55:47,598 - INFO - API isteği yapılıyor (deneme 1/3)
+2024-11-25 11:55:50,174 - INFO - Cevap üretildi. Güncelleme gerekiyor mu: True
+2024-11-25 11:55:52,496 - INFO - GPT'den hızlı cevap alınıyor
+2024-11-25 11:55:52,496 - INFO - API isteği yapılıyor (deneme 1/3)
+2024-11-25 11:55:53,274 - INFO - Cevap üretildi. Güncelleme gerekiyor mu: True
+2024-11-25 11:56:43,321 - INFO - GPT'den hızlı cevap alınıyor
+2024-11-25 11:56:43,322 - INFO - API isteği yapılıyor (deneme 1/3)
+2024-11-25 11:56:44,077 - INFO - Cevap üretildi. Güncelleme gerekiyor mu: True
+2024-11-25 11:58:22,340 - INFO - AI asistan hazır!
+2024-11-25 11:58:22,340 - INFO - Scraper initialized
+2024-11-25 11:58:22,764 - INFO - GPT'den hızlı cevap alınıyor
+2024-11-25 11:58:22,764 - INFO - API isteği yapılıyor (deneme 1/3)
+2024-11-25 11:58:27,372 - INFO - GPT'den hızlı cevap alınıyor
+2024-11-25 11:58:27,373 - INFO - API isteği yapılıyor (deneme 1/3)
+2024-11-25 11:58:28,996 - INFO - Cevap üretildi. Güncelleme gerekiyor mu: True
+2024-11-25 11:58:29,306 - INFO - Cevap üretildi. Güncelleme gerekiyor mu: False
+2024-11-25 11:58:45,235 - INFO - GPT'den hızlı cevap alınıyor
+2024-11-25 11:58:45,235 - INFO - API isteği yapılıyor (deneme 1/3)
+2024-11-25 11:58:47,485 - INFO - Cevap üretildi. Güncelleme gerekiyor mu: False
+2024-11-25 11:59:02,869 - INFO - GPT'den hızlı cevap alınıyor
+2024-11-25 11:59:02,869 - INFO - API isteği yapılıyor (deneme 1/3)
+2024-11-25 11:59:05,350 - INFO - Cevap üretildi. Güncelleme gerekiyor mu: False
+2024-11-25 12:00:41,273 - INFO - AI asistan hazır!
+2024-11-25 12:00:41,273 - INFO - Scraper initialized
+2024-11-25 12:00:47,167 - INFO - GPT'den hızlı cevap alınıyor
+2024-11-25 12:00:47,167 - INFO - API isteği yapılıyor (deneme 1/3)
+2024-11-25 12:00:49,687 - INFO - Cevap üretildi. Güncelleme gerekiyor mu: False
+2024-11-25 12:01:00,961 - INFO - GPT'den hızlı cevap alınıyor
+2024-11-25 12:01:00,961 - INFO - API isteği yapılıyor (deneme 1/3)
+2024-11-25 12:01:02,999 - INFO - Cevap üretildi. Güncelleme gerekiyor mu: False
+2024-11-25 12:03:28,927 - INFO - AI asistan hazır!
+2024-11-25 12:03:28,927 - INFO - Scraper initialized
+2024-11-25 12:03:31,193 - INFO - GPT'den hızlı cevap alınıyor
+2024-11-25 12:03:31,194 - INFO - API isteği yapılıyor (deneme 1/3)
+2024-11-25 12:03:32,989 - INFO - GPT'den hızlı cevap alınıyor
+2024-11-25 12:03:32,989 - INFO - API isteği yapılıyor (deneme 1/3)
+2024-11-25 12:03:35,239 - INFO - Cevap üretildi. Güncelleme gerekiyor mu: True
+2024-11-25 12:03:35,741 - INFO - Cevap üretildi. Güncelleme gerekiyor mu: True
+2024-11-25 12:03:44,802 - INFO - GPT'den hızlı cevap alınıyor
+2024-11-25 12:03:44,802 - INFO - API isteği yapılıyor (deneme 1/3)
+2024-11-25 12:03:47,340 - INFO - Cevap üretildi. Güncelleme gerekiyor mu: True
+2024-11-25 12:04:29,351 - INFO - GPT'den hızlı cevap alınıyor
+2024-11-25 12:04:29,351 - INFO - API isteği yapılıyor (deneme 1/3)
+2024-11-25 12:04:33,875 - INFO - Cevap üretildi. Güncelleme gerekiyor mu: True
+2024-11-25 12:06:55,230 - INFO - AI asistan hazır!
+2024-11-25 12:06:55,230 - INFO - Scraper initialized
+2024-11-25 12:07:00,471 - INFO - GPT'den hızlı cevap alınıyor
+2024-11-25 12:07:00,471 - INFO - API isteği yapılıyor (deneme 1/3)
+2024-11-25 12:07:04,268 - INFO - GPT'den hızlı cevap alınıyor
+2024-11-25 12:07:04,268 - INFO - API isteği yapılıyor (deneme 1/3)
+2024-11-25 12:07:05,358 - INFO - Cevap üretildi. Güncelleme gerekiyor mu: False
+2024-11-25 12:07:09,046 - INFO - Cevap üretildi. Güncelleme gerekiyor mu: False
+2024-11-25 12:10:29,738 - INFO - AI asistan hazır!
+2024-11-25 12:10:29,738 - INFO - Scraper initialized
+2024-11-25 12:10:30,685 - INFO - GPT'den hızlı cevap alınıyor
+2024-11-25 12:10:30,686 - INFO - API isteği yapılıyor (deneme 1/3)
+2024-11-25 12:10:33,359 - INFO - GPT'den hızlı cevap alınıyor
+2024-11-25 12:10:33,359 - INFO - API isteği yapılıyor (deneme 1/3)
+2024-11-25 12:10:36,210 - INFO - Cevap üretildi. Güncelleme gerekiyor mu: False
+2024-11-25 12:10:38,225 - INFO - Cevap üretildi. Güncelleme gerekiyor mu: False
+2024-11-25 12:10:41,811 - INFO - GPT'den hızlı cevap alınıyor
+2024-11-25 12:10:41,812 - INFO - API isteği yapılıyor (deneme 1/3)
+2024-11-25 12:10:42,543 - INFO - Cevap üretildi. Güncelleme gerekiyor mu: False
+2024-11-25 12:12:01,002 - INFO - AI asistan hazır!
+2024-11-25 12:12:01,002 - INFO - Scraper initialized
+2024-11-25 12:12:06,423 - INFO - GPT'den hızlı cevap alınıyor
+2024-11-25 12:12:06,423 - INFO - API isteği yapılıyor (deneme 1/3)
+2024-11-25 12:12:07,099 - INFO - GPT'den hızlı cevap alınıyor
+2024-11-25 12:12:07,099 - INFO - API isteği yapılıyor (deneme 1/3)
+2024-11-25 12:12:11,517 - INFO - GPT'den hızlı cevap alınıyor
+2024-11-25 12:12:11,517 - INFO - API isteği yapılıyor (deneme 1/3)
+2024-11-25 12:12:11,775 - INFO - Cevap üretildi. Güncelleme gerekiyor mu: False
+2024-11-25 12:12:12,127 - INFO - Cevap üretildi. Güncelleme gerekiyor mu: False
+2024-11-25 12:12:16,255 - INFO - Cevap üretildi. Güncelleme gerekiyor mu: False
+2024-11-25 12:14:18,790 - INFO - AI asistan hazır!
+2024-11-25 12:14:18,790 - INFO - Scraper initialized
+2024-11-25 12:14:18,977 - INFO - GPT'den hızlı cevap alınıyor
+2024-11-25 12:14:18,978 - INFO - API isteği yapılıyor (deneme 1/3)
+2024-11-25 12:14:19,006 - INFO - GPT'den hızlı cevap alınıyor
+2024-11-25 12:14:19,006 - INFO - API isteği yapılıyor (deneme 1/3)
+2024-11-25 12:14:19,878 - INFO - GPT'den hızlı cevap alınıyor
+2024-11-25 12:14:19,878 - INFO - API isteği yapılıyor (deneme 1/3)
+2024-11-25 12:14:30,621 - INFO - GPT'den hızlı cevap alınıyor
+2024-11-25 12:14:30,621 - INFO - API isteği yapılıyor (deneme 1/3)
+2024-11-25 12:14:36,554 - INFO - Cevap üretildi. Güncelleme gerekiyor mu: True
+2024-11-25 12:14:36,858 - INFO - Cevap üretildi. Güncelleme gerekiyor mu: True
+2024-11-25 12:14:37,179 - INFO - Cevap üretildi. Güncelleme gerekiyor mu: True
+2024-11-25 12:14:45,458 - INFO - Cevap üretildi. Güncelleme gerekiyor mu: True

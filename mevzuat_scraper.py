@@ -1,70 +1,127 @@
 import requests
 from bs4 import BeautifulSoup
-import re
+import logging
+
+# Logging configuration
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(levelname)s - %(message)s',
+    handlers=[
+        logging.FileHandler('scraper.log'),
+        logging.StreamHandler()
+    ]
+)
 
 class MevzuatScraper:
     def __init__(self):
-        self.base_url = "https://www.gib.gov.tr"
-        self.search_url = "https://www.gib.gov.tr/arama"
+        self.mevzuat_url = "https://www.mevzuat.gov.tr"
+        self.resmigazete_url = "https://www.resmigazete.gov.tr"
+        self.headers = {
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
+        }
+        logging.info("Scraper initialized")
+
+    def search_mevzuat(self, query, search_mevzuat=True, search_resmigazete=True):
+        """Search both mevzuat.gov.tr and resmigazete.gov.tr based on user selection."""
+        results = []
         
-    def search_mevzuat(self, query):
-        """Mevzuat sitesinde arama yapar ve ilgili sonuçları döndürür."""
         try:
-            params = {
-                'keys': query,
-                'field_category_tid[]': '846',  # Mevzuat kategorisi
-            }
+            if search_mevzuat:
+                logging.info("Searching mevzuat.gov.tr")
+                mevzuat_results = self._search_mevzuat_gov(query)
+                results.extend(mevzuat_results)
             
-            response = requests.get(self.search_url, params=params)
+            if search_resmigazete:
+                logging.info("Searching resmigazete.gov.tr")
+                resmigazete_results = self._search_resmigazete_gov(query)
+                results.extend(resmigazete_results)
+            
+            logging.info(f"Found {len(results)} total results")
+            return results
+            
+        except Exception as e:
+            logging.error(f"Error during search: {e}")
+            return []
+
+    def _search_mevzuat_gov(self, query):
+        """Search on mevzuat.gov.tr"""
+        try:
+            search_url = f"{self.mevzuat_url}/arama.aspx"
+            params = {'q': query}
+            
+            response = requests.get(search_url, params=params, headers=self.headers)
             response.raise_for_status()
             
             soup = BeautifulSoup(response.text, 'html.parser')
-            search_results = []
+            results = []
             
-            # Arama sonuçlarını bul
-            results = soup.find_all('div', class_='views-row')
-            
-            for result in results:
-                title_elem = result.find('a')
-                if title_elem:
-                    title = title_elem.text.strip()
-                    link = self.base_url + title_elem['href']
-                    
-                    # İçeriği al
-                    content = self._get_content(link)
-                    
-                    search_results.append({
-                        'title': title,
-                        'link': link,
-                        'content': content
+            for result in soup.select('.search-result'):
+                title = result.select_one('.title')
+                link = result.select_one('a')
+                content = result.select_one('.content')
+                date = result.select_one('.date')
+                
+                if title and link:
+                    results.append({
+                        'title': title.text.strip(),
+                        'link': self.mevzuat_url + link['href'] if link['href'].startswith('/') else link['href'],
+                        'content': content.text.strip() if content else '',
+                        'date': date.text.strip() if date else '',
+                        'source': 'mevzuat.gov.tr'
                     })
             
-            return search_results
+            logging.info(f"Found {len(results)} results from mevzuat.gov.tr")
+            return results
             
-        except requests.RequestException as e:
-            print(f"Arama sırasında hata oluştu: {e}")
+        except Exception as e:
+            logging.error(f"Error searching mevzuat.gov.tr: {e}")
             return []
-    
-    def _get_content(self, url):
-        """Verilen URL'den içeriği çeker ve temizler."""
+
+    def _search_resmigazete_gov(self, query):
+        """Search on resmigazete.gov.tr"""
         try:
-            response = requests.get(url)
+            search_url = f"{self.resmigazete_url}/arama"
+            params = {'q': query}
+            
+            response = requests.get(search_url, params=params, headers=self.headers)
             response.raise_for_status()
             
             soup = BeautifulSoup(response.text, 'html.parser')
+            results = []
             
-            # Ana içerik alanını bul
-            content_div = soup.find('div', class_='field-item even')
+            for result in soup.select('.gazette-result'):
+                title = result.select_one('.title')
+                link = result.select_one('a')
+                content = result.select_one('.content')
+                date = result.select_one('.date')
+                
+                if title and link:
+                    results.append({
+                        'title': title.text.strip(),
+                        'link': self.resmigazete_url + link['href'] if link['href'].startswith('/') else link['href'],
+                        'content': content.text.strip() if content else '',
+                        'date': date.text.strip() if date else '',
+                        'source': 'resmigazete.gov.tr'
+                    })
             
-            if content_div:
-                # HTML etiketlerini temizle
-                content = content_div.get_text(separator=' ', strip=True)
-                # Fazla boşlukları temizle
-                content = re.sub(r'\s+', ' ', content)
-                return content
+            logging.info(f"Found {len(results)} results from resmigazete.gov.tr")
+            return results
             
-            return ""
+        except Exception as e:
+            logging.error(f"Error searching resmigazete.gov.tr: {e}")
+            return []
+
+    def _get_content(self, url):
+        """Get content from a specific URL"""
+        try:
+            response = requests.get(url, headers=self.headers)
+            response.raise_for_status()
             
-        except requests.RequestException as e:
-            print(f"İçerik çekilirken hata oluştu: {e}")
+            soup = BeautifulSoup(response.text, 'html.parser')
+            content = soup.select_one('.content')
+            
+            return content.text.strip() if content else ""
+            
+        except Exception as e:
+            logging.error(f"Error getting content from {url}: {e}")
             return ""
