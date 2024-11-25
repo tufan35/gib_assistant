@@ -128,3 +128,28 @@
 2024-11-25 12:14:36,858 - INFO - Cevap üretildi. Güncelleme gerekiyor mu: True
 2024-11-25 12:14:37,179 - INFO - Cevap üretildi. Güncelleme gerekiyor mu: True
 2024-11-25 12:14:45,458 - INFO - Cevap üretildi. Güncelleme gerekiyor mu: True
+2024-11-25 12:39:41,096 - INFO - AI asistan hazır!
+2024-11-25 12:39:41,097 - INFO - Scraper initialized
+2024-11-25 12:39:47,481 - INFO - GPT'den hızlı cevap alınıyor
+2024-11-25 12:39:47,482 - INFO - API isteği yapılıyor (deneme 1/3)
+2024-11-25 12:40:00,916 - INFO - Cevap üretildi. Güncelleme gerekiyor mu: True
+2024-11-25 12:40:23,992 - INFO - GPT'den hızlı cevap alınıyor
+2024-11-25 12:40:23,993 - INFO - API isteği yapılıyor (deneme 1/3)
+2024-11-25 12:40:37,237 - INFO - Cevap üretildi. Güncelleme gerekiyor mu: True
+2024-11-25 12:44:48,896 - INFO - AI asistan hazır!
+2024-11-25 12:44:48,896 - INFO - Scraper initialized
+2024-11-25 12:44:53,987 - INFO - GPT'den hızlı cevap alınıyor
+2024-11-25 12:44:53,987 - INFO - API isteği yapılıyor (deneme 1/3)
+2024-11-25 12:45:07,222 - INFO - Cevap üretildi. Güncelleme gerekiyor mu: True
+2024-11-25 12:45:44,041 - INFO - GPT'den hızlı cevap alınıyor
+2024-11-25 12:45:44,042 - INFO - API isteği yapılıyor (deneme 1/3)
+2024-11-25 12:45:55,396 - INFO - Cevap üretildi. Güncelleme gerekiyor mu: True
+2024-11-25 12:47:00,131 - INFO - GPT'den hızlı cevap alınıyor
+2024-11-25 12:47:00,132 - INFO - API isteği yapılıyor (deneme 1/3)
+2024-11-25 12:47:13,553 - INFO - Cevap üretildi. Güncelleme gerekiyor mu: True
+2024-11-25 12:51:47,906 - INFO - GPT'den hızlı cevap alınıyor
+2024-11-25 12:51:47,906 - INFO - API isteği yapılıyor (deneme 1/3)
+2024-11-25 12:51:56,876 - INFO - Cevap üretildi. Güncelleme gerekiyor mu: True
+2024-11-25 12:52:28,521 - INFO - GPT'den hızlı cevap alınıyor
+2024-11-25 12:52:28,522 - INFO - API isteği yapılıyor (deneme 1/3)
+2024-11-25 12:52:40,127 - INFO - Cevap üretildi. Güncelleme gerekiyor mu: True

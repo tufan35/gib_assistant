@@ -2,6 +2,7 @@ import requests
 from dotenv import load_dotenv
 import time
 import logging
+import os
 
 # Logging konfigürasyonu
 logging.basicConfig(
@@ -13,11 +14,12 @@ logging.basicConfig(
     ]
 )
 
+load_dotenv()
+
 class AIAssistant:
     def __init__(self):
         # Hugging Face token'ını yükle
-        load_dotenv()
-        self.hf_token = "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"
+        self.hf_token = os.getenv("HUGGING_FACE_TOKEN")
         self.api_url = "https://api-inference.huggingface.co/models/mistralai/Mistral-7B-Instruct-v0.2"
         
         # API headers
@@ -63,86 +65,10 @@ class AIAssistant:
     def get_quick_answer(self, question):
         """GPT'den hızlı bir cevap al."""
         try:
-            system_prompt = """Sen GİB (Gelir İdaresi Başkanlığı) KDV uzmanısın. KDV beyannameleri konusunda detaylı ve net bilgiler veriyorsun.
+            system_prompt = """Sen GİB (Gelir İdaresi Başkanlığı) uzmanısın. Türk vergi mevzuatı ve beyanname süreçleri hakkında detaylı ve net bilgiler veriyorsun.
             TÜM YANITLARINI TÜRKÇE OLARAK VERMELİSİN. İNGİLİZCE KULLANMA!
             HER SORUYA TAM VE EKSİKSİZ YANIT VER, YARIM BIRAKMA!
-
-            KDV1 BEYANNAMESİ HAZIRLAMA ADIMLARI (TÜM ADIMLARI EKSİKSİZ TAMAMLA):
-            1. İnteraktif Vergi Dairesi Giriş:
-               - https://ivd.gib.gov.tr adresine gidin
-               - e-Devlet şifreniz veya GİB şifreniz ile giriş yapın
-               - Güvenlik doğrulamasını tamamlayın
-               - Ana sayfada "Beyanname İşlemleri" bölümüne ilerleyin
-
-            2. Beyanname Seçimi ve Dönem:
-               - Sol menüden "Beyanname İşlemleri"ne tıklayın
-               - "Beyanname Hazırla" seçeneğini seçin
-               - Açılan listeden "KDV-1" beyannamesini bulun ve tıklayın
-               - Vergilendirme dönemini seçin (örn: 2023/Kasım)
-               - Normal/Düzeltme beyanname seçimini yapın
-
-            3. Matrah Bilgileri - Teslimler ve Hizmetler:
-               - Tablo I'de yer alan "Mal ve Hizmet Teslimleri" bölümünü doldurun
-               - KDV hariç tutarları ilgili satırlara girin
-               - Teslim türüne göre KDV oranlarını (%1, %8, %18, %20) seçin
-               - Hesaplanan KDV tutarlarını kontrol edin
-               - Varsa tevkifat uygulanan işlemleri belirtin
-
-            4. Matrah Bilgileri - İstisnalar:
-               - Kısmi istisna kapsamındaki işlemleri girin
-               - Tam istisna kapsamındaki işlemleri belirtin
-               - İhraç kayıtlı teslimleri ayrı olarak gösterin
-               - İstisna türüne göre belge tarih ve numaralarını ekleyin
-               - İstisna kapsamındaki tutarları KDV'siz olarak girin
-
-            5. İndirimler - Alış ve İthalat:
-               - Yurt içi mal ve hizmet alımlarına ait KDV'yi girin
-               - İthalat işlemlerine ait ödenen KDV'yi ekleyin
-               - Tevkifata tabi işlemlerden doğan KDV'yi belirtin
-               - İade hakkı doğuran işlemlere ait KDV'yi ayırın
-               - Kısmi istisna kapsamında indirilecek KDV'yi hesaplayın
-
-            6. İndirimler - Devreden ve İade:
-               - Önceki dönemden devreden KDV tutarını girin
-               - Bu döneme ait indirilecek KDV'yi ekleyin
-               - İade edilebilir KDV tutarını hesaplayın
-               - Tecil edilebilir KDV varsa belirtin
-               - Sonraki döneme devreden KDV'yi kontrol edin
-
-            7. Ekler ve Bildirimler:
-               - Form BA-BS bildirimlerini hazırlayın
-               - İhraç kayıtlı teslim bildirimlerini doldurun
-               - KDV tevkifat bildirimini tamamlayın
-               - İade talep edilen işlemlere ait listeleri ekleyin
-               - Belgelerin tarih ve numaralarını kontrol edin
-
-            8. Beyanname Ekleri:
-               - Gerekli tüm listeleri hazırlayın
-               - İade talep ediliyorsa YMM raporunu ekleyin
-               - İhracat istisnası varsa gümrük beyannamelerini iliştirin
-               - İstisna belgelerinin fotokopilerini ekleyin
-               - Tevkifat ile ilgili belgeleri düzenleyin
-
-            9. Kontrol ve Hatalar:
-               - Sistem kontrollerini çalıştırın
-               - Matematiksel hataları kontrol edin
-               - Uyarı mesajlarını tek tek inceleyin
-               - Tutarsızlıkları düzeltin
-               - Beyanname ve eklerinin uyumunu kontrol edin
-
-            10. Onaylama ve Gönderim:
-                - Beyanname önizlemesini yapın
-                - Tüm bilgileri son kez gözden geçirin
-                - Elektronik imza ile imzalayın
-                - Beyannameyi gönderin
-                - Tahakkuk fişini alın ve saklayın
-
-            KDV1 BEYANNAMESİ VERME SÜRELERİ:
-            - Her ayın 1-26'sı arasında verilir
-            - Bir önceki ayın işlemlerini kapsar
-            - Son gün tatile denk gelirse, takip eden ilk iş günü son gündür
-            - Beyanname verme ve ödeme süreleri farklı olabilir
-            - Sürelere uyulmaması halinde cezai işlem uygulanır"""
+            """
 
             prompt = f"""<s>[INST] {system_prompt}
 
@@ -177,7 +103,7 @@ class AIAssistant:
     def answer_question(self, question, context):
         """Verilen bağlam içinde soruyu cevaplar."""
         try:
-            system_prompt = "Sen GİB (Gelir İdaresi Başkanlığı) KDV uzmanısın. Sadece verilen bağlamdaki bilgileri kullanarak cevap ver."
+            system_prompt = "Sen GİB (Gelir İdaresi Başkanlığı) uzmanısın. Sadece verilen bağlamdaki bilgileri kullanarak cevap ver."
 
             prompt = f"""<s>[INST] {system_prompt}
 
