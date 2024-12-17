@@ -32,3 +32,67 @@
 2024-12-18 01:17:18,075 - INFO - API isteği yapılıyor (deneme 2/3)
 2024-12-18 01:17:20,531 - INFO - API isteği yapılıyor (deneme 3/3)
 2024-12-18 01:17:20,958 - ERROR - API hatası: 400 Client Error: Bad Request for url: https://api.anthropic.com/v1/messages
+2024-12-18 01:30:48,168 - INFO - anthropic_token kaydedildi
+2024-12-18 01:30:57,676 - INFO - Scraper initialized
+2024-12-18 01:30:57,677 - INFO - AI asistan anthropic ile başlatıldı!
+2024-12-18 01:30:57,677 - INFO - API isteği yapılıyor (deneme 1/3)
+2024-12-18 01:30:59,287 - INFO - API isteği yapılıyor (deneme 2/3)
+2024-12-18 01:31:01,729 - INFO - API isteği yapılıyor (deneme 3/3)
+2024-12-18 01:31:02,182 - ERROR - API hatası: 400 Client Error: Bad Request for url: https://api.anthropic.com/v1/messages
+2024-12-18 01:33:51,332 - INFO - anthropic_token kaydedildi
+2024-12-18 01:34:01,214 - INFO - Scraper initialized
+2024-12-18 01:34:01,214 - INFO - AI asistan anthropic ile başlatıldı!
+2024-12-18 01:34:01,215 - INFO - API isteği yapılıyor (deneme 1/3)
+2024-12-18 01:34:02,617 - INFO - API isteği yapılıyor (deneme 2/3)
+2024-12-18 01:34:05,071 - INFO - API isteği yapılıyor (deneme 3/3)
+2024-12-18 01:34:05,490 - ERROR - API hatası: 400 Client Error: Bad Request for url: https://api.anthropic.com/v1/messages
+2024-12-18 01:34:44,325 - INFO - anthropic_token kaydedildi
+2024-12-18 01:34:53,561 - INFO - Scraper initialized
+2024-12-18 01:34:53,562 - INFO - AI asistan anthropic ile başlatıldı!
+2024-12-18 01:34:53,563 - INFO - API isteği yapılıyor (deneme 1/3)
+2024-12-18 01:34:53,563 - INFO - Anthropic API isteği: {
+  "model": "claude-2",
+  "max_tokens": 1024,
+  "messages": [
+    {
+      "role": "user",
+      "content": "Sen deneyimli bir Gelir \u0130daresi Ba\u015fkanl\u0131\u011f\u0131 (G\u0130B) uzman\u0131s\u0131n.\n            \n            Yan\u0131tlar\u0131n\u0131 \u015fu formatta vermelisin:\n            1. Her cevab\u0131 yeni bir sat\u0131rda ba\u015flat\n            2. Sadece sorulan sorunun cevab\u0131n\u0131 ver\n            3. T\u00fcrk\u00e7e yan\u0131t ver\n            4. Maddeler halinde a\u00e7\u0131kla\n            5. Varsa rakamlar\u0131 ve tarihleri belirt\n            6. \u0130lgili kanun maddelerini parantez i\u00e7inde belirt\n\nSoru: kdv1 nedir\n"
+    }
+  ],
+  "system": "Sen deneyimli bir Gelir \u0130daresi Ba\u015fkanl\u0131\u011f\u0131 (G\u0130B) uzman\u0131s\u0131n."
+}
+2024-12-18 01:34:53,999 - INFO - Anthropic API yanıtı: {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."}}
+2024-12-18 01:34:55,004 - INFO - API isteği yapılıyor (deneme 2/3)
+2024-12-18 01:34:55,004 - INFO - Anthropic API isteği: {
+  "model": "claude-2",
+  "max_tokens": 1024,
+  "messages": [
+    {
+      "role": "user",
+      "content": "Sen deneyimli bir Gelir \u0130daresi Ba\u015fkanl\u0131\u011f\u0131 (G\u0130B) uzman\u0131s\u0131n.\n            \n            Yan\u0131tlar\u0131n\u0131 \u015fu formatta vermelisin:\n            1. Her cevab\u0131 yeni bir sat\u0131rda ba\u015flat\n            2. Sadece sorulan sorunun cevab\u0131n\u0131 ver\n            3. T\u00fcrk\u00e7e yan\u0131t ver\n            4. Maddeler halinde a\u00e7\u0131kla\n            5. Varsa rakamlar\u0131 ve tarihleri belirt\n            6. \u0130lgili kanun maddelerini parantez i\u00e7inde belirt\n\nSoru: kdv1 nedir\n"
+    }
+  ],
+  "system": "Sen deneyimli bir Gelir \u0130daresi Ba\u015fkanl\u0131\u011f\u0131 (G\u0130B) uzman\u0131s\u0131n."
+}
+2024-12-18 01:34:55,403 - INFO - Anthropic API yanıtı: {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."}}
+2024-12-18 01:34:57,405 - INFO - API isteği yapılıyor (deneme 3/3)
+2024-12-18 01:34:57,405 - INFO - Anthropic API isteği: {
+  "model": "claude-2",
+  "max_tokens": 1024,
+  "messages": [
+    {
+      "role": "user",
+      "content": "Sen deneyimli bir Gelir \u0130daresi Ba\u015fkanl\u0131\u011f\u0131 (G\u0130B) uzman\u0131s\u0131n.\n            \n            Yan\u0131tlar\u0131n\u0131 \u015fu formatta vermelisin:\n            1. Her cevab\u0131 yeni bir sat\u0131rda ba\u015flat\n            2. Sadece sorulan sorunun cevab\u0131n\u0131 ver\n            3. T\u00fcrk\u00e7e yan\u0131t ver\n            4. Maddeler halinde a\u00e7\u0131kla\n            5. Varsa rakamlar\u0131 ve tarihleri belirt\n            6. \u0130lgili kanun maddelerini parantez i\u00e7inde belirt\n\nSoru: kdv1 nedir\n"
+    }
+  ],
+  "system": "Sen deneyimli bir Gelir \u0130daresi Ba\u015fkanl\u0131\u011f\u0131 (G\u0130B) uzman\u0131s\u0131n."
+}
+2024-12-18 01:34:57,823 - INFO - Anthropic API yanıtı: {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."}}
+2024-12-18 01:34:57,823 - ERROR - API hatası: 400 Client Error: Bad Request for url: https://api.anthropic.com/v1/messages
+2024-12-18 01:38:02,421 - INFO - openai_token kaydedildi
+2024-12-18 01:38:21,030 - INFO - Scraper initialized
+2024-12-18 01:38:21,030 - INFO - AI asistan openai ile başlatıldı!
+2024-12-18 01:38:21,031 - INFO - API isteği yapılıyor (deneme 1/3)
+2024-12-18 01:38:23,303 - INFO - API isteği yapılıyor (deneme 2/3)
+2024-12-18 01:38:25,731 - INFO - API isteği yapılıyor (deneme 3/3)
+2024-12-18 01:38:26,137 - ERROR - API hatası: 429 Client Error: Too Many Requests for url: https://api.openai.com/v1/chat/completions

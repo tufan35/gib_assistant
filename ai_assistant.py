@@ -31,9 +31,9 @@ class AIAssistant:
             "anthropic": {
                 "api_url": "https://api.anthropic.com/v1/messages",
                 "headers": {
-                    "anthropic-version": "2023-06-01",
                     "x-api-key": self.api_token,
-                    "Content-Type": "application/json"
+                    "anthropic-version": "2023-06-01",
+                    "content-type": "application/json"
                 }
             },
             "openai": {
@@ -68,10 +68,24 @@ class AIAssistant:
                     }
                 elif self.model_provider == "anthropic":
                     payload = {
-                        "messages": [{"role": "user", "content": prompt}],
                         "model": "claude-2",
+                        "messages": [
+                            {
+                                "role": "user",
+                                "content": prompt
+                            }
+                        ],
                         "max_tokens": 1024
                     }
+                    response = requests.post(
+                        self.current_config["api_url"],
+                        headers=self.current_config["headers"],
+                        json=payload,
+                        timeout=30
+                    )
+                    response.raise_for_status()
+                    result = response.json()
+                    return [{"generated_text": result.get("content", "")}]
                 else:  # openai
                     payload = {
                         "model": "gpt-3.5-turbo",
@@ -103,10 +117,7 @@ class AIAssistant:
                         return [{"generated_text": result[0].get("generated_text", "")}]
                     else:
                         return [{"generated_text": result[0]}]
-                elif self.model_provider == "anthropic":
-                    result = response.json()
-                    return [{"generated_text": result["content"][0]["text"]}]
-                else:  # openai
+                elif self.model_provider == "openai":
                     result = response.json()
                     return [{"generated_text": result["choices"][0]["message"]["content"]}]
 

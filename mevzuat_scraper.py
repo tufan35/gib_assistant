@@ -2,7 +2,6 @@ import requests
 from bs4 import BeautifulSoup
 import logging
 
-# Logging configuration
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(levelname)s - %(message)s',
@@ -24,7 +23,6 @@ class MevzuatScraper:
         logging.info("Scraper initialized")
 
     def search_mevzuat(self, query, search_mevzuat=True, search_resmigazete=True):
-        """Search both mevzuat.gov.tr and resmigazete.gov.tr based on user selection."""
         results = []
         
         try:
@@ -46,17 +44,6 @@ class MevzuatScraper:
             return []
 
     def search(self, query, search_gib=False, search_mevbank=False):
-        """
-        Verilen sorguya göre mevzuat araması yapar.
-        
-        Args:
-            query (str): Arama sorgusu
-            search_gib (bool): GİB mevzuatında arama yapılıp yapılmayacağı
-            search_mevbank (bool): Mevbank'ta arama yapılıp yapılmayacağı
-        
-        Returns:
-            list: Bulunan mevzuat bilgilerinin listesi
-        """
         results = []
         
         try:
@@ -75,29 +62,22 @@ class MevzuatScraper:
             return []
     
     def _search_gib(self, query):
-        """GİB mevzuatında arama yapar"""
         try:
-            # GİB mevzuat araması implementasyonu
             results = []
-            # TODO: GİB web sitesinden mevzuat arama fonksiyonunu implement et
             return results
         except Exception as e:
             logging.error(f"GİB arama hatası: {str(e)}")
             return []
     
     def _search_mevbank(self, query):
-        """Mevbank'ta arama yapar"""
         try:
-            # Mevbank araması implementasyonu
             results = []
-            # TODO: Mevbank'tan mevzuat arama fonksiyonunu implement et
             return results
         except Exception as e:
             logging.error(f"Mevbank arama hatası: {str(e)}")
             return []
 
     def _search_mevzuat_gov(self, query):
-        """Search on mevzuat.gov.tr"""
         try:
             search_url = f"{self.mevzuat_url}/arama.aspx"
             params = {'q': query}
@@ -131,7 +111,6 @@ class MevzuatScraper:
             return []
 
     def _search_resmigazete_gov(self, query):
-        """Search on resmigazete.gov.tr"""
         try:
             search_url = f"{self.resmigazete_url}/arama"
             params = {'q': query}
@@ -165,7 +144,6 @@ class MevzuatScraper:
             return []
 
     def _get_content(self, url):
-        """Get content from a specific URL"""
         try:
             response = requests.get(url, headers=self.headers)
             response.raise_for_status()
